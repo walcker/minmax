@@ -12,28 +12,36 @@ int main(){
     setlocale(LC_ALL,"");
 
     //Definindo variáveis
-    int tamanho, cont;
+    int tamanho, cont, max, min;
 
     //Lendo o tamanho do vetor
     cout << "Digite o tamanho do vetor que deseja criar: ";
     cin >> tamanho;
 
     //Criando um ponteiro que recebe o novo vetor vazio
-    int *vetor = new int(tamanho);
+    int vetor[tamanho];
 
     //Modificando e imprimindo valores
     for(cont = 0; cont < tamanho; cont++){
         cout << "entre com o valor do vetor na posição: " << cont << endl;
         cin >> vetor[cont];
-        cout << vetor[cont] << endl;
     }
 
-    for(cont = 0; cont < tamanho; cont++){
-        cout << vetor[cont] << endl;
+    for(int i = 0; i < tamanho; i++){
+      cout << vetor[i] << " ";
     }
 
-    free(vetor);
+    cout << endl;
 
-    system("pause");
+    max = vetor[0];
+      for(int i = 1; i < 5; i++){
+        if(vetor[i] > max){
+          max = vetor[i];
+        }
+      }
+   
+
+    cout << max << endl;
+
     return 0;
 }
