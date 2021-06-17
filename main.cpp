@@ -12,7 +12,7 @@ int main(){
     setlocale(LC_ALL,"");
 
     //Definindo variáveis
-    int tamanho, cont, max, min;
+    int tamanho, cont, max, min, min_i, max_i;
 
     //Lendo o tamanho do vetor
     cout << "Digite o tamanho do vetor que deseja criar: ";
@@ -37,11 +37,20 @@ int main(){
       for(int i = 1; i < 5; i++){
         if(vetor[i] > max){
           max = vetor[i];
+          max_i = i;
+        }
+      }
+
+      min = vetor[0];
+      for(int i = 1; i < 5; i++){
+        if(vetor[i] < min){
+          min = vetor[i];
+          min_i = i;
         }
       }
    
 
-    cout << max << endl;
+    cout << max_i << " " << min_i << endl;
 
     return 0;
 }
