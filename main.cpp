@@ -12,7 +12,7 @@ int main(){
     setlocale(LC_ALL,"");
 
     //Definindo variáveis
-    int tamanho, cont, max, min, min_i, max_i;
+    int tamanho, cont, max, min, min_i = 0, max_i = 0;
 
     //Lendo o tamanho do vetor
     cout << "Digite o tamanho do vetor que deseja criar: ";
